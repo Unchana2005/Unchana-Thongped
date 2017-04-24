@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!--Import Google Icon Font-->
+     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+     <!--Let browser know website is optimized for mobile-->
+
+     <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <nav>
+        <div class="nav-wrapper">
+          <a class="brand-logo center">Music App</a>
+           <a href="#!" class="brand-logo center">
+
+          </ul>
+        </div>
+      </nav>
+    <a class="waves-effect waves-light btn"><i class="material-icons left">assignment_ind</i>Sing in</a>
+     <link href="file:///D:/5730211075/075.html#!"
+
+
+  </head>
+  <body>
+    <div class="container">
+    <h1>Sign In</h1>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Sign in to the system</h3>
+      </div>
+      <div class="panel-body">
+        <form class="" action="#" method="post">
+          <div class="form-group">
+             <i class="Small material-icons">perm_identity</i><label for="username">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="">
+
+          </div>
+          <div class="form-group">
+            <i class="Small material-icons">https</i><label for="passoword">Passowrd</label>
+            <input type="password" class="form-control" id="password" placeholder="">
+
+          </div>
+          <div class="form-group">
+            <button type="button" id="signin" class="btn btn-primary" name="button">Sign In</button>
+          </div>
+        </form>
+      </div>
+      <div class="panel-footer"></div>
+    </div>
+    <div id="err" style="display:none" class="alert alert-danger alert-dismissable fade in">
+
+
+    <script type="text/javascript">
+      $("#signin").click(function() {
+        var url = "http://membershipwebapi977290.azurewebsites.net/api/Members/signin?";
+        url += "username=" + $("#username").val();
+        url += "&password=" + $("#password").val();
+        console.log(url);
+        $.get(url, function(data, status) {
+          console.log(data);
+          if(data == true){
+            console.log(data.Status);
+
+          }else{
+            console.log(data.Status);
+            $("#err").show();
+
+          }
+        });
+      });
+    </script>
+
+
+</body>
+</html>
